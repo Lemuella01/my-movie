@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.family{
+  font-family: 'Fascinate', cursive;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.textbtn{
+  font-family: Arial Helvetica, sans-serif;
 }
+.bgimage{
+background-image: url('./image/batman2.jpg');
+}
+
+.bgimage1{
+  background-image: url('./image/blue (1).jpeg');
+  }
+
+  .bgimage2{
+    background-image: url('./image/blue (2).jpeg');
+    }
+    .pagination-bar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .pagination-container {
+      display: flex;
+      list-style-type: none;
+      margin-top: 20px;
+    }
+    
+      .pagination-item {
+        padding: 0 12px;
+        height: 32px;
+        text-align: center;
+        margin: auto 4px;
+        color: rgba(0, 0, 0, 0.87);
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        letter-spacing: 0.01071em;
+        border-radius: 16px;
+        line-height: 1.43;
+        font-size: 16px;
+        min-width: 32px;
+        
+      }
+
+      .dots{
+       color: #000;
+      }
+        .dots:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+        :hover {
+         
+          cursor: pointer;
+        }
+    
+        .selected {
+          color: white;
+          background-color: royalblue
+        }
+       
+
+        .pagination-item:hover{
+         
+          background-color: rgba(0, 0, 0, 0.047);
+        }
+    
+        
+          .arrow.left {
+            /* transform: rotate(-135deg) translate(-50%); */
+            color: black;
+            font-size: 13px;
+            font-weight: 900;
+          }
+    
+          .arrow.right {
+            /* transform: rotate(45deg); */
+            color: black;
+            font-size: 18px;
+            font-size: 13px;
+            font-weight: 500;
+            
+          }
+        
+    
+        .disabled {
+          pointer-events: none;
+        }
+          .arrow::before {
+            
+            border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+            border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+          }
+    
+        
+        .arrow:hover {
+            background-color: transparent;
+            cursor: default;
+          }
+        
+      
+    

@@ -1,0 +1,8 @@
+  <div>
+      {movies.map((movie,index)=>{
+        return <Movie key ={index} {...movie}/>
+        // <Movie key ={movie.imageUrl} title={movie.title} overview={movie.overview} date={movie.date} />
+
+      })}
+    </div>
+
