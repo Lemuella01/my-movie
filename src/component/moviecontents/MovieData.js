@@ -1,11 +1,19 @@
 import React from "react";
 import { GoThumbsup } from "react-icons/go";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const AllMovies = ({ imageUrl, title, date, overview }) => {
+const MovieData = ({ imageUrl, title, date, overview, id}) => {
   const imgPath = "https://image.tmdb.org/t/p/w500";
 
+ const navigate = useNavigate()
   return (
-    <div className="flex bg-white px-5  h-44  hover:bg-fuchsia-50  mt-10 shadow-xl mx-40">
+  //  <Link to={`/details/`}>  
+
+   <div onClick={()=>{navigate('/moviedetails/'+id)
+   console.log(id)
+   }} className="flex bg-white px-5  h-44  hover:bg-fuchsia-50  mt-10 shadow-xl mx-40">
+
       <div className="">
         <img
           className=" w-[120px] h-[140px] mt-4 object-cover rounded-lg"
@@ -23,7 +31,9 @@ const AllMovies = ({ imageUrl, title, date, overview }) => {
       </div>
       <div className="mt-20 ml-20 ">{date}</div>
     </div>
+    // </Link>
   );
 };
 
-export default AllMovies;
+export default MovieData;
+

@@ -12,13 +12,13 @@ const Nav = () => {
     </Link>
 
     <div className='text-blue-700 ' >
-   <Link className='' to="/movie"> <ButtonOne className="mt-6 bg-white textbtn px-3 py-1 rounded-lg text-xl"
+   <Link className='' to="/popular"> <ButtonOne className="mt-6 bg-white textbtn h-8 px-2  rounded-lg text-lg"
       text="Movies"
       onClick={() => console.log('Button was clicked!')}
     />
     </Link>
 
-    <Link  to="/show"> <ButtonOne className='textbtn ml-10 mt-6 bg-white  px-3 py-1 rounded-lg text-lg'
+    <Link  to="/tvshow"> <ButtonOne className='textbtn ml-2 mt-6 bg-white   h-8 px-2 rounded-lg text-lg'
       text="Tv Shows"
       onClick={() => console.log('Button was clicked!')}
     />

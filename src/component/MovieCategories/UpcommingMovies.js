@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import MovieCards from './MovieCards';
 
-const MovieTilesTri = () => {
+const UpcommingMovies = () => {
   
     const [upcoming, setUpcoming] = useState([]);
 
@@ -25,7 +25,7 @@ const MovieTilesTri = () => {
       {" "}
       <div className="flex justify-between px-32 ">
         <h1 className="text-2xl  font-sans">Upcomming</h1>
-        <Link to="/movie">
+        <Link to="/upcoming">
           {" "}
           <p className="text-lg text-blue-600 font-sans">View All</p>
         </Link>
@@ -36,6 +36,7 @@ const MovieTilesTri = () => {
             key={upc.title}
             title={upc.title}
             imageUrl={upc.poster_path}
+            id= {upc.id}
           />
         ))}
       </div>
@@ -45,4 +46,4 @@ const MovieTilesTri = () => {
   
 
 
-export default MovieTilesTri
+export default UpcommingMovies

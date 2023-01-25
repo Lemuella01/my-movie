@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import MovieCards from './MovieCards'
 
-const MovieTileOne = () => {
+const TopMovies = () => {
   const [topRated, setTopRated] = useState([]);
   const TOP_URL =
   "https://api.themoviedb.org/3/movie/top_rated?api_key=2fd287448aab167e35caec5c68d669ee";
@@ -29,7 +29,7 @@ const MovieTileOne = () => {
     {" "}
     <div className="flex justify-between px-32 ">
       <h1 className="text-2xl  font-sans">Top Rated</h1>
-      <Link to="/movie">
+      <Link to="/top_rated">
         {" "}
         <p className="text-lg text-blue-600 font-sans">View All</p>
       </Link>
@@ -40,6 +40,8 @@ const MovieTileOne = () => {
           key={top.title}
           title={top.title}
           imageUrl={top.poster_path}
+          id = {top.id}
+          
         />
       ))}
     </div>
@@ -47,4 +49,4 @@ const MovieTileOne = () => {
   )
 }
 
-export default MovieTileOne
+export default TopMovies
