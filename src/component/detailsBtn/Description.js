@@ -23,7 +23,7 @@ const param = useParams()
      }
 
      const pathname = useLocation()
- if (pathname !== "/moviedetails/:id")
+     if (pathname !== "/moviedetails/:id")
   return null
 
     
